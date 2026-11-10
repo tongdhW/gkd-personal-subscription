@@ -1,0 +1,82 @@
+{
+  "id": 20261109,
+  "name": "东浩的 GKD 规则",
+  "version": 4,
+  "author": "tongdonghao",
+  "updateUrl": "https://raw.githubusercontent.com/tongdhW/gkd-personal-subscription/main/gkd.json5",
+  "apps": [
+    {
+      "id": "cn.etouch.ecalendar",
+      "name": "中华万年历",
+      "groups": [
+        {
+          "key": 0,
+          "name": "全屏广告-插屏广告",
+          "enable": true,
+          "rules": [
+            {
+              "key": 0,
+              "fastQuery": true,
+              "activityIds": [
+                "cn.etouch.ecalendar.module.main.ui.MainActivity"
+              ],
+              "matches": "[vid=\"cll_interstitial_20000_close_wrap\"] > [vid=\"cll_close_3\"][clickable=true][visibleToUser=true]"
+            }
+          ]
+        },
+        {
+          "key": 1,
+          "name": "局部广告-顶部推送广告",
+          "enable": true,
+          "rules": [
+            {
+              "key": 0,
+              "fastQuery": true,
+              "activityIds": [
+                "cn.etouch.ecalendar.module.main.ui.MainActivity"
+              ],
+              "matches": "[vid=\"fl_full_screen\"] [vid=\"ad_close_img\"][clickable=true][visibleToUser=true]"
+            }
+          ]
+        },
+        {
+          "key": 2,
+          "name": "局部广告-日历卡片广告",
+          "enable": true,
+          "rules": [
+            {
+              "key": 0,
+              "fastQuery": true,
+              "activityIds": [
+                "cn.etouch.ecalendar.module.main.ui.MainActivity"
+              ],
+              "matches": "[vid=\"weather_ad_view\"] [vid=\"ad_close_img\"][clickable=true][visibleToUser=true]"
+            }
+          ]
+        },
+        {
+          "key": 3,
+          "name": "全屏广告-无ID插屏广告",
+          "enable": true,
+          "rules": [
+            {
+              "key": 0,
+              "activityIds": [
+                "cn.etouch.ecalendar.module.main.ui.MainActivity"
+              ],
+              "matches": "ImageView[width=132][height=48] <n FrameLayout > FrameLayout[childCount=1][width=64][height=64] > ImageView[width=64][height=64]"
+            },
+            {
+              "key": 1,
+              "fastQuery": true,
+              "activityIds": [
+                "cn.etouch.ecalendar.module.main.ui.MainActivity"
+              ],
+              "matches": "[text*=\"立即抢购\"] <n FrameLayout + FrameLayout[childCount=1][width=64][height=64] > ImageView[width=64][height=64]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
